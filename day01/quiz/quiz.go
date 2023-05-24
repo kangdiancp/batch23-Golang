@@ -26,7 +26,6 @@ func tahunHari(menit int) {
 	sisa := menit % 525600
 
 	hari := sisa / 1440
-	menit = hari / 1440
 
 	fmt.Printf("%d =  %d tahun, %d hari", input, tahun, hari)
 }
