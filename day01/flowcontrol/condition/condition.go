@@ -64,7 +64,6 @@ func guessNumber() {
 	angka1 := rand.Intn(10)
 	angka2 := rand.Intn(6)
 	angka3 := angka1 - angka2
-	str := "tebak"
 
 	fmt.Printf("Berapa hasil %d - %d = ?", angka1, angka2)
 	//println("Berapa hasil 7-3 =?")
