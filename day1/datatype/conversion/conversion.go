@@ -113,11 +113,11 @@ func parseStringToBool() {
 }
 
 func main() {
-	intToFloat()
-	floatToInt()
-	intToString()
-	totalPrice()
+	// intToFloat()
+	// floatToInt()
+	// intToString()
+	// totalPrice()
 	parseToInt()
-	parseToFloat()
-	parseStringToBool()
+	// parseToFloat()
+	// parseStringToBool()
 }
