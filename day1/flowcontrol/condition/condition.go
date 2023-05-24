@@ -87,7 +87,7 @@ func guestNumber() {
 func multipleArgs() {
 	fmt.Println("Input 3 angka : ")
 	var angka1, angka2, angka3 int
-	_, err := fmt.Scan(&angka1, &angka2, &angka3)
+	_, err := fmt.Scan(&angka1, &angka2, &angka3) //bila mao tampilin
 	if err != nil {
 		log.Fatal(err)
 	}
