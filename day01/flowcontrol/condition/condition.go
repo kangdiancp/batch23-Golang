@@ -6,6 +6,12 @@ import (
 	"math/rand"
 )
 
+// import (
+// 	"fmt"
+// 	"log"
+// 	"math/rand"
+// )
+
 func oddOrEven(number int) {
 	if number%2 == 0 {
 		println("Even number")
