@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"log"
 	"math/rand"
 )
 
@@ -56,39 +55,60 @@ func initialIf() {
 	// }
 }
 
-func guessNumber() {
-	angka1 := rand.Intn(10)
-	angka2 := rand.Intn(6)
-	angka3 := angka1 - angka2
+// func guessNumber() {
+// 	angka1 := rand.Intn(10)
+// 	angka2 := rand.Intn(6)
+// 	angka3 := angka1 - angka2
 
-	fmt.Printf("Berpa hasil %d - %d = ?", angka1, angka2)
-	// println("Berpa hasil 7-3 = ?")
+// 	fmt.Printf("Berpa hasil %d - %d = ?", angka1, angka2)
+// 	// println("Berpa hasil 7-3 = ?")
 
-	// Declare var jawab u/ nampung inputan dari console
-	var jawab int
-	_, err := fmt.Scan(&jawab)
-	if err != nil {
-		log.Fatal(err)
+// 	// Declare var jawab u/ nampung inputan dari console
+// 	var jawab int
+// 	_, err := fmt.Scan(&jawab)
+// 	if err != nil {
+// 		log.Fatal(err)
+// 	}
+// 	if jawab == angka3 {
+// 		println("Jawaban anda Benar")
+// 	} else {
+// 		println("Jawaban anda salah")
+// 	}
+
+// 	// println("jawab : ", jawab)
+// }
+
+// func multipleArgs() {
+// 	fmt.Println("Input 3 angka : ")
+
+// 	var angka1, angka2, angka3 int
+// 	n, err := fmt.Scan(&angka1, &angka2, &angka3)
+// if err != nil {
+// 		log.Fatal(err)
+// 	}
+
+// 	fmt.Println("Jawaban : ", angka1, angka2, angka3, n)
+// }
+
+func tebakHari(day int) {
+	switch n := day; {
+	case n == 0:
+		fmt.Println("sunday")
+	case n == 1:
+		fmt.Println("monday")
+	case n == 2:
+		fmt.Println("Thuesday")
+	case n == 3:
+		fmt.Println("wednesday")
+	case n == 4:
+		fmt.Println("thursday")
+	case n == 5:
+		fmt.Println("friday")
+	case n == 6:
+		fmt.Println("saturday")
+	default:
+		fmt.Println("Not today")
 	}
-	if jawab == angka3 {
-		println("Jawaban anda Benar")
-	} else {
-		println("Jawaban anda salah")
-	}
-
-	// println("jawab : ", jawab)
-}
-
-func multipleArgs() {
-	fmt.Println("Input 3 angka : ")
-
-	var angka1, angka2, angka3 int
-	n, err := fmt.Scan(&angka1, &angka2, &angka3)
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	fmt.Println("Jawaban : ", angka1, angka2, angka3, n)
 }
 
 func main() {
@@ -97,5 +117,6 @@ func main() {
 	// randomNumber()
 	// initialIf()
 	// guessNumber()
-	multipleArgs()
+	// multipleArgs()
+	tebakHari(2)
 }
