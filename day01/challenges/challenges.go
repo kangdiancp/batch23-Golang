@@ -1,6 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math/rand"
+	"strconv"
+)
 
 func soal1(number float64) {
 	phii := 3.14159
@@ -21,16 +25,155 @@ func soal3(num1, num2, num3 float32) {
 }
 
 func soal4(tahun int) {
-	if tahun%400 == 0 && tahun%100 == 0 && tahun%4 == 0 {
+	if (tahun%4 == 0 && tahun%100 != 0) || tahun%400 == 0 {
 		fmt.Printf("Tahun %d tahun kabisat", tahun)
 	} else {
 		fmt.Printf("Tahun %d bukan tahun kabisat", tahun)
 	}
 }
 
+func displayMinuteSec(sec int) {
+	minutes := sec / 60
+	seconds := sec % 60
+	fmt.Printf("Result : %d minutes %d seconds", minutes, seconds)
+}
+
+func secondsTodays(sec int) {
+	days := sec / 86400
+	sisa := sec % 86400
+	hours := sisa / 3600
+	sisa = sisa % 3600
+	minutes := sisa / 60
+	seconds := sisa % 60
+
+	fmt.Printf("Hasil Konversi : %d hari %d jam %d menit %d detik", days, hours, minutes, seconds)
+}
+
+func reverseNumber(number int) {
+
+	num1 := number % 1000
+	num2 := num1 % 100
+	satuan := num2 % 10
+	puluhan := num2 / 10
+	ratusan := num1 / 100
+	ribuan := number / 1000
+
+	if number < 1_000 || number > 9999 {
+		println("input number harus dalam range 1_000 - 9999")
+	} else {
+		println(strconv.Itoa(satuan) + strconv.Itoa(puluhan) + strconv.Itoa(ratusan) + strconv.Itoa(ribuan))
+	}
+}
+
+func sumNumber(number int) {
+
+	num1 := number % 1000
+	num2 := num1 % 100
+	satuan := num2 % 10
+	puluhan := num2 / 10
+	ratusan := num1 / 100
+	ribuan := number / 1000
+	sum := ribuan + ratusan + puluhan + satuan
+
+	if number < 1_000 || number > 9999 {
+		println("input number harus dalam range 1_000 - 9999")
+	} else {
+		fmt.Printf("Sum Number: %d -> %d ", number, sum)
+	}
+}
+
+func sortTigaAngka() {
+	fmt.Println("Input Tiga Angka: ")
+	var angka1, angka2, angka3 int
+	fmt.Scan(&angka1, &angka2, &angka3)
+	if angka1 <= angka2 && angka1 <= angka3 {
+		if angka2 <= angka3 {
+			fmt.Printf("%d %d %d", angka1, angka2, angka3)
+		} else {
+
+			fmt.Printf("%d %d %d", angka1, angka3, angka2)
+		}
+	} else if angka2 <= angka1 && angka2 <= angka3 {
+		if angka1 <= angka3 {
+			fmt.Printf("%d %d %d", angka2, angka1, angka3)
+		} else {
+			fmt.Printf("%d %d %d", angka2, angka3, angka1)
+		}
+	} else {
+		if angka1 <= angka2 {
+			fmt.Printf("%d %d %d", angka3, angka1, angka2)
+		} else {
+			fmt.Printf("%d %d %d", angka3, angka2, angka1)
+		}
+	}
+}
+
+func gameGunting() {
+	fmt.Println("Pilih: (1) Gunting, (2)Batu, (3)Kertas")
+	fmt.Println("input: ")
+
+	var pilihankamu int
+	fmt.Scan(&pilihankamu)
+
+	komputer := rand.Intn(3) + 1
+
+	if komputer == 1 && pilihankamu == 1 {
+		fmt.Printf("Seri, Komputer [Gunting] VS Kamu [Gunting]")
+
+	} else if komputer == 1 && pilihankamu == 2 {
+		fmt.Printf("Anda Menang, Komputer [Gunting] VS Kamu [Batu]")
+
+	} else if komputer == 1 && pilihankamu == 3 {
+		fmt.Printf("Anda Kalah, Komputer [Gunting] VS Kamu [Kertas]")
+
+	} else if komputer == 2 && pilihankamu == 1 {
+		fmt.Printf("Anda Kalah, Komputer [Batu] VS Kamu [Gunting]")
+
+	} else if komputer == 2 && pilihankamu == 2 {
+		fmt.Printf("Draw, Komputer [Batu] VS Kamu [Batu]")
+
+	} else if komputer == 2 && pilihankamu == 3 {
+		fmt.Printf("Anda Menang, Komputer [Batu] VS Kamu [Kertas]")
+
+	} else if komputer == 3 && pilihankamu == 1 {
+		fmt.Printf("Anda Menang, Komputer [Kertas] VS Kamu [Gunting]")
+	} else if komputer == 3 && pilihankamu == 2 {
+		fmt.Printf("Anda Kalah, Komputer [Kertas] VS Kamu [Batu]")
+	} else {
+		fmt.Printf("Draw, Komputer [Kertas] VS Kamu [Kertas]")
+	}
+
+}
+
+// func games() {
+// 	fmt.Println("Pilih : (1)Gunting (2)Batu (3)Kertas")
+// 	fmt.Println("Pilihan Anda: ")
+// 	var input int
+// 	fmt.Scan(&input)
+// 	computer := rand.Intn(3) + 1
+// 	fmt.Print(computer)
+// 	if computer == input {
+// 		println("Seri")
+// 	} else if computer == 1 && input == 3 {
+// 		println("Kalah")
+// 	} else if computer == 2 && input == 1 {
+// 		println("kalah")
+// 	} else if computer == 3 && input == 2 {
+// 		println("Kalah")
+// 	} else {
+// 		println("Menang")
+// 	}
+// }
+
 func main() {
 	soal1(10)
 	soal2(30, 60)
 	soal3(12.5, 9.7, 6.98)
-	soal4(2002)
+	soal4(2012)
+	displayMinuteSec(1234)
+	secondsTodays(1_000_000)
+	reverseNumber(1234)
+	sumNumber(1234)
+	sortTigaAngka()
+	gameGunting()
 }
