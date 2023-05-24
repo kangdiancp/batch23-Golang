@@ -32,6 +32,12 @@ func floatToInt() {
 	fmt.Println("\n Float To Int : ", i, formatInt)
 }
 
+func computeAverage() {
+	bilangan := 15 + 15 + 25
+
+	println("Average : ", bilangan/3)
+}
+
 func intToString() {
 	price := 45
 	totalPrice := 198
