@@ -7,26 +7,27 @@ import (
 
 func main() {
 	//Nomor 1
-	// totalLompat(10, 85, 30)
+	totalLompat(10, 85, 30)
 	//Nomor 2
-	// konversiTahunHari(1000000000)
+	konversiTahunHari(1000000000)
 	//Nomor 3
-	// var jarak, bensin, harga float64
-	// fmt.Print("Masukkan Jarak yang di tempuh : ")
-	// fmt.Scan(&jarak)
-	// fmt.Print("Masukkan Konsumsi bensin per kilo : ")
-	// fmt.Scan(&bensin)
-	// fmt.Print("Masukkan Harga bensin : ")
-	// fmt.Scan(&harga)
-	// totalJarak(jarak, bensin, harga)
+	var jarak, bensin, harga float64
+	fmt.Print("Masukkan Jarak yang di tempuh : ")
+	fmt.Scan(&jarak)
+	fmt.Print("Masukkan Konsumsi bensin per kilo : ")
+	fmt.Scan(&bensin)
+	fmt.Print("Masukkan Harga bensin : ")
+	fmt.Scan(&harga)
+	totalJarak(jarak, bensin, harga)
+
 	//Nomor 4
-	// var inputThnLahir int
-	// fmt.Print("Masukkan Tahun Lahir : ")
-	// fmt.Scan(&inputThnLahir)
-	// shioCalender(inputThnLahir)
+	var inputThnLahir int
+	fmt.Print("Masukkan Tahun Lahir : ")
+	fmt.Scan(&inputThnLahir)
+	shioCalender(inputThnLahir)
 
 	//Nomor 5
-	// simulasiATM(10, 5, 1)
+	simulasiATM(10, 5, 1)
 
 	//Nomor 6
 	var userInput int

@@ -8,25 +8,25 @@ import (
 )
 
 func main() {
-	// var nilai int
-	// //
-	// oddOrEven(8)
+	var nilai int
+	//
+	oddOrEven(8)
 
-	// //Mencari nilai fizzbuzz
-	// fmt.Println("Masukkan Nilai FizzBuzz Anda : ")
-	// fmt.Scanln(&nilai)
-	// fizzBuzz(nilai)
+	//Mencari nilai fizzbuzz
+	fmt.Println("Masukkan Nilai FizzBuzz Anda : ")
+	fmt.Scanln(&nilai)
+	fizzBuzz(nilai)
 
-	// //memberikan nilai random
-	// randomNumber()
+	//memberikan nilai random
+	randomNumber()
 
-	// initialIf()
+	initialIf()
 
-	// guessNumber()
+	guessNumber()
 
-	// multiperArgs()
+	multiperArgs()
 
-	// tebakHari(0)
+	tebakHari(0)
 
 }
 
