@@ -1,1 +1,5 @@
-Ini coba Merge
+// Git Command For
+
+(1.) git checkout -b [namaBranch] => buat branch baru
+(2.) git checkout [namaBranch] => pindah branch
+(3.) git merge [namaBranch] => update branch dari branch lainnya
