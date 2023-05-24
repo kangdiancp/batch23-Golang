@@ -98,6 +98,28 @@ func multipleArgs() {
 	fmt.Println("jawaban : ", angka1, angka2, angka3, n)
 }
 
+func tebakHari(day int) {
+	switch n := day; {
+	case n == 0:
+		fmt.Println("Sunday")
+	case n == 1:
+		fmt.Println("Monday")
+	case n == 2:
+		fmt.Println("Tuesday")
+	case n == 3:
+		fmt.Println("Wednesday")
+	case n == 4:
+		fmt.Println("Thursday")
+	case n == 5:
+		fmt.Println("Friday")
+	case n == 6:
+		fmt.Println("Saturday")
+	default:
+		fmt.Println("Not today")
+	}
+
+}
+
 func main() {
 	oddOrEven(8)
 	fizzBuzz(7)
@@ -105,4 +127,5 @@ func main() {
 	initialIf()
 	guessNumber()
 	multipleArgs()
+	tebakHari(3)
 }
