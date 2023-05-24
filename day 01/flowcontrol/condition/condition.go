@@ -93,11 +93,32 @@ func multiArgs() {
 
 	fmt.Println("Jawaban : ", angka1, angka2, angka3, n)
 }
+
+func tebakHari(day int) {
+	switch n := day; {
+	case n == 0:
+		println("Sunday")
+	case n == 1:
+		println("Monday")
+	case n == 2:
+		println("Tuesday")
+	case n == 3:
+		println("Wednesday")
+	case n == 4:
+		println("Thursday")
+	case n == 5:
+		println("Friday")
+	case n == 0:
+		println("Saturday")
+	}
+}
+
 func main() {
 	// addOrEvent(8)
 	// fizzBuzz(1)
 	// randomNumber()
 	// initialif()
 	guessNumber()
-	multiArgs()
+	// multiArgs()
+	// tebakHari(5)
 }

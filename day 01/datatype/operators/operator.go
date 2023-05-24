@@ -1,9 +1,9 @@
 package main
 
 func divisionModulus() {
-	number := 15
+	number := 1234
 	bagi := number / 3
-	sisa := number % 3
+	sisa := number % 10
 	println("Hasil Bagi = ", bagi)
 	println("Hasil sisa = ", sisa)
 }
