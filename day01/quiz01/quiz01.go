@@ -201,11 +201,11 @@ func tebakHadiah() {
 }
 
 func main() {
-	totalLompat(0, 120, 30)
-	menitToTahun(1000000000)
-	totalJarak()
-	shioCalender()
-	simulasiAtm()
-	tebakHadiah()
+	//totalLompat(0, 120, 30)
+	//menitToTahun(1000000000)
+	//totalJarak()
+	//shioCalender()
+	//simulasiAtm()
+	//tebakHadiah()
 
 }
