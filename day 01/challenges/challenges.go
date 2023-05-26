@@ -134,34 +134,34 @@ func sortTigaAngka() {
 }
 
 func main() {
-	var jari float32
-	var sudut1, sudut2 int
-	var av1, av2, av3 float32
-	var input int
+	// var jari float32
+	// var sudut1, sudut2 int
+	// var av1, av2, av3 float32
+	// var input int
 
-	//Nomor 1
-	fmt.Println("Masukkan Nilai lingkaran : ")
-	fmt.Scan(&jari)
-	luasLingkaran(jari)
+	// //Nomor 1
+	// fmt.Println("Masukkan Nilai lingkaran : ")
+	// fmt.Scan(&jari)
+	// luasLingkaran(jari)
 
-	//Nomor 2
-	fmt.Println("Masukkan Sudut Segitiga : ")
-	fmt.Scan(&sudut1, &sudut2)
-	sudutSegitiga(sudut1, sudut2)
+	// //Nomor 2
+	// fmt.Println("Masukkan Sudut Segitiga : ")
+	// fmt.Scan(&sudut1, &sudut2)
+	// sudutSegitiga(sudut1, sudut2)
 
-	//nomor3
-	fmt.Println("Masukkan inputan yang akan diratakan : ")
-	fmt.Scan(&av1, &av2, &av3)
-	average(av1, av2, av3)
+	// //nomor3
+	// fmt.Println("Masukkan inputan yang akan diratakan : ")
+	// fmt.Scan(&av1, &av2, &av3)
+	// average(av1, av2, av3)
 
-	//nomor 4
-	fmt.Println("Input Tahun: ")
-	fmt.Scan(&input)
-	tahunKabinet(input)
-	displayTime()
-	yearTimed()
-	reverseNumber(1234)
-	sumNumber(2424)
-	games()
+	// //nomor 4
+	// fmt.Println("Input Tahun: ")
+	// fmt.Scan(&input)
+	// tahunKabinet(input)
+	// displayTime()
+	// yearTimed()
+	// reverseNumber(1234)
+	// sumNumber(2424)
+	// games()
 	sortTigaAngka()
 }

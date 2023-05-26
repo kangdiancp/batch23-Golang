@@ -171,7 +171,7 @@ func tebakHadiah() {
 
 	angkaa1 := strconv.Itoa(angka1)
 	angkaa2 := strconv.Itoa(angka2)
-	angkatotal := strconv.Itoa(angka1) + strconv.Itoa(angka2)
+	angkatotal := angkaa1 + angkaa2
 	computerr := strconv.Itoa(computer)
 	computerr1 := strconv.Itoa(computer1)
 	computerr2 := strconv.Itoa(computer2)
