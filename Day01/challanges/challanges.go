@@ -27,44 +27,43 @@ import (
 // 	var avarage float64
 // 	avarage = (f1 + f2 + f2) / 3
 // 	fmt.Printf("avarage : %.3f\n", avarage)
-
 // }
 
-// func soal4(tahun int) {
-// 	if tahun%4 == 0 && (tahun%400 == 0 || tahun%100 != 0) {
-// 		fmt.Printf("tahun %d tahun kabisat\n", tahun)
+func soal4(tahun int) {
+	if tahun%4 == 0 && (tahun%400 == 0 || tahun%100 != 0) {
+		fmt.Printf("tahun %d tahun kabisat\n", tahun)
 
-// 	} else {
-// 		fmt.Printf("tahun %d bukan tahun kabisat \n", tahun)
-// 	}
-// }
+	} else {
+		fmt.Printf("tahun %d bukan tahun kabisat \n", tahun)
+	}
+}
 
 // Soal 5
-// func displayTime(second int) {
-// 	menit := second / 60
-// 	detik := second % 60
-// 	fmt.Printf("Result : %d minutes %d seconds", menit, detik)
-// }
+func displayTime(second int) {
+	menit := second / 60
+	detik := second % 60
+	fmt.Printf("Result : %d minutes %d seconds", menit, detik)
+}
 
 // Soal 6
-// func secondToDays(second int) {
-// 	var hari, jam, menit, detik, sisa int
-// 1 hari = 24 jam, 1 jam = 60 menit, 1 menit = 60 detik
-// 1 hari = 24 jam * 3600 = 86_400 detk
-// 	hari = second / 86400
-// 	sisa = second % 86400
+func secondToDays(second int) {
+	var hari, jam, menit, detik, sisa int
+1 hari = 24 jam, 1 jam = 60 menit, 1 menit = 60 detik
+1 hari = 24 jam * 3600 = 86_400 detk
+	hari = second / 86400
+	sisa = second % 86400
 
-//hitung jam, 1 jam = 3600 detik
-// 	jam = sisa / 3600
-// 	sisa = sisa % 3600
+hitung jam, 1 jam = 3600 detik
+	jam = sisa / 3600
+	sisa = sisa % 3600
 
-//hitung menit, 1 menit = 60 detik
-// 	menit = sisa / 60
-// 	detik = sisa % 60
+hitung menit, 1 menit = 60 detik
+	menit = sisa / 60
+	detik = sisa % 60
 
-//display
-// 	fmt.Printf("\nKonverisi : %dhari %d jam %d menit %d detik", hari, jam, menit, detik)
-// }
+display
+	fmt.Printf("\nKonverisi : %dhari %d jam %d menit %d detik", hari, jam, menit, detik)
+}
 
 // Soal 7
 // func reverseNumber(number int) {
@@ -95,7 +94,7 @@ import (
 // Soal 8
 func gameGunting() {
 	fmt.Println("Pilih: (1) Gunting, (2)Batu, (3)Kertas")
-	fmt.Println("input: ")
+	fmt.Print("input: ")
 
 	var pilihankamu int
 	fmt.Scan(&pilihankamu)
@@ -204,9 +203,9 @@ func main() {
 	// soal4(2012)
 	// soal4(2002)
 	// displayTime(3620)
-	// secondToDays(20000000)
+	secondToDays(1000000)
 	// reverseNumber(1234)
 	// gameGunting()
 	// sortTigaAngka()
-	sumNumber(1234)
+	// sumNumber(1234)
 }
