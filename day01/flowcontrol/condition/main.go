@@ -13,6 +13,7 @@ func main() {
 	initialIf()
 	guessNumber()
 	multipleArgs()
+	tebakHari(2)
 }
 
 func oddOrEven(number int) {
@@ -104,4 +105,26 @@ func multipleArgs() {
 		log.Fatal(err)
 	}
 	fmt.Println("jawaban : ", angka1, angka2, angka3, n)
+}
+
+func tebakHari(day int) {
+	switch n := day; {
+	case n == 0:
+		fmt.Println("sunday")
+	case n == 1:
+		fmt.Println("monday")
+	case n == 2:
+		fmt.Println("tuesday")
+	case n == 3:
+		fmt.Println("wednesday")
+	case n == 4:
+		fmt.Println("thursday")
+	case n == 5:
+		fmt.Println("friday")
+	case n == 6:
+		fmt.Println("saturday")
+	default:
+		fmt.Println("not today")
+
+	}
 }
