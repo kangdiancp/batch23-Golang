@@ -108,35 +108,15 @@ func quis2() {
 	var input int
 	fmt.Print("Masukkan Inputan Angka :")
 	fmt.Scan(&input)
-	for row := 1; row <= input; row++ {
-		for ulang := 0; ulang < input/2; ulang++ {
-			for col := 1; col <= input; col++ {
-				if col == input {
-					fmt.Print(row)
-				} else {
-					fmt.Print("")
-				}
-			}
-			for col := input; col >= 1; col-- {
-				if col == 1 {
-					fmt.Print(input - row + 1)
-				} else {
-					fmt.Print("")
-				}
+	for row := 0; row < input; row++ {
+		for col := 0; col < input; col++ {
+			if col%2 == 0 {
+				fmt.Print(row + 1)
+			} else {
+				fmt.Print(input - row)
 			}
 		}
-		if input%2 == 1 {
-			for col := 1; col <= input; col++ {
-				if col == input {
-					fmt.Print(row)
-				} else {
-					fmt.Print("")
-				}
-			}
-		}
-
-		fmt.Println()
-
+		println()
 	}
 }
 
