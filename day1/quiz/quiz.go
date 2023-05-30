@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	"math/rand"
-	"strconv"
 )
 
 func quiz1() {
@@ -168,17 +167,31 @@ func quiz5() {
 
 	fmt.Println("Inputkan pin Passsword Anda : ")
 	fmt.Scan(&pin)
-	if pin != 1234 {
+	if pin != 000000 {
 		fmt.Println("Pin Salah ! Kesempatan 2 Kali Lagi Untuk Mencoba : ")
 		fmt.Println("Inputkan pin Passsword Anda : ")
 		fmt.Scan(&pin)
-		if pin != 1234 {
+		if pin != 000000 {
 			fmt.Println("Pin Salah ! Kesempatan 1 Kali Lagi Untuk Mencoba : ")
 			fmt.Println("Inputkan pin Passsword Anda : ")
 			fmt.Scan(&pin)
-			if pin != 1234 {
+			if pin != 000000 {
 				fmt.Println("Pin Salah pin anda di lock : ")
+			} else {
+				fmt.Printf("Masukkan Nominal Uang yang akan diambil : ")
+				fmt.Scan(&jumlah_uang)
+				nominal1 := jumlah_uang / 10
+				nominal2 := (jumlah_uang % 10) / 5
+				nominal3 := jumlah_uang % 5
+				fmt.Printf("$10 = %d Lembar, $5 = %d Lembar, $1 = %d Lembar", nominal1, nominal2, nominal3)
 			}
+		} else {
+			fmt.Printf("Masukkan Nominal Uang yang akan diambil : ")
+			fmt.Scan(&jumlah_uang)
+			nominal1 := jumlah_uang / 10
+			nominal2 := (jumlah_uang % 10) / 5
+			nominal3 := jumlah_uang % 5
+			fmt.Printf("$10 = %d Lembar, $5 = %d Lembar, $1 = %d Lembar", nominal1, nominal2, nominal3)
 		}
 	} else {
 		fmt.Printf("Masukkan Nominal Uang yang akan diambil : ")
@@ -189,7 +202,6 @@ func quiz5() {
 
 		fmt.Printf("$10 = %d Lembar, $5 = %d Lembar, $1 = %d Lembar", nominal1, nominal2, nominal3)
 	}
-
 }
 
 //TebakHadiah. Buat program permainan tebak berhadiah. user input dua digit angka integer dalam skala (10-99).
@@ -208,50 +220,80 @@ func quiz5() {
 // Komputer random : 85
 // Display output : You Lose !
 func quiz6() {
-	var angka int
-	fmt.Println("Masukkan angka : ")
-	fmt.Scan(&angka)
+	// var angka int
+	// fmt.Println("Masukkan angka : ")
+	// fmt.Scan(&angka)
 
-	num1 := angka / 10
-	sisa := angka % 10
-	num2 := sisa % 10
+	// num1 := angka / 10
+	// sisa := angka % 10
+	// num2 := sisa % 10
 
-	random := rand.Intn(100) + 11
-	comp_random := random / 10
-	sisa_random := random % 10
-	comp_random1 := sisa_random % 10
+	// random := rand.Intn(100) + 11
+	// comp_random := random / 10
+	// sisa_random := random % 10
+	// comp_random1 := sisa_random % 10
 
-	number_satu := strconv.Itoa(num1)
-	number_dua := strconv.Itoa(num2)
-	number_tiga := number_satu + number_dua
-	gacha1 := strconv.Itoa(random)
-	gacha2 := strconv.Itoa(comp_random)
-	gacha3 := strconv.Itoa(comp_random1)
+	// number_satu := strconv.Itoa(num1)
+	// number_dua := strconv.Itoa(num2)
+	// number_tiga := number_satu + number_dua
+	// gacha1 := strconv.Itoa(random)
+	// gacha2 := strconv.Itoa(comp_random)
+	// gacha3 := strconv.Itoa(comp_random1)
 
-	if gacha1 == number_satu {
-		println("User input : ", angka)
-		println("Komputer random : ", gacha1)
-		println("Match all digit : you win Rp.100.000")
-	} else if gacha2 == number_dua {
-		println("User input : ", angka)
-		println("Komputer random : ", gacha1)
-		println("Exact match : you win Rp.50.000")
-	} else if gacha3 == number_tiga {
-		println("User input : ", angka)
-		println("Komputer random : ", gacha1)
-		println("Exact match : you win Rp.50.000")
+	// if gacha1 == number_satu {
+	// 	println("User input : ", angka)
+	// 	println("Komputer random : ", gacha1)
+	// 	println("Match all digit : you win Rp.100.000")
+	// } else if gacha2 == number_dua {
+	// 	println("User input : ", angka)
+	// 	println("Komputer random : ", gacha1)
+	// 	println("Exact match : you win Rp.50.000")
+	// } else if gacha3 == number_tiga {
+	// 	println("User input : ", angka)
+	// 	println("Komputer random : ", gacha1)
+	// 	println("Exact match : you win Rp.50.000")
+	// } else {
+	// 	println("User input : ", angka)
+	// 	println("Komputer random : ", gacha1)
+	// 	println("You Lose!")
+	// }
+
+	var gacha, angka1, angka2, angka3, angka4 int
+	fmt.Println("$$$ ==> SELAMAT DATANG DI PERMAINAN TEBAK BERHADIAH <=== $$$")
+	fmt.Println("")
+	fmt.Println("Silahkan Masukkan 2 digit Nomor Keberuntungan anda antara 10 - 99")
+	fmt.Scan(&gacha)
+	angka1 = gacha / 10
+	angka2 = gacha % 10
+
+	min := 10
+	max := 99
+	komputer_random := rand.Intn(max-min) + min
+	angka3 = komputer_random / 10
+	angka4 = komputer_random % 10
+
+	if gacha < 10 || gacha > 99 {
+		fmt.Printf("Input Harus berada pada range 10 - 99")
+	} else if gacha == komputer_random {
+		fmt.Println("User Input :", gacha)
+		fmt.Println("Komputer random :", komputer_random)
+		fmt.Printf("Match All Digit : You Win Rp 100.000")
+	} else if angka1 == angka3 || angka1 == angka4 || angka2 == angka3 || angka2 == angka4 {
+		fmt.Println("User Input :", gacha)
+		fmt.Println("Komputer random :", komputer_random)
+		fmt.Printf("Exact match : You win Rp 50.000")
 	} else {
-		println("User input : ", angka)
-		println("Komputer random : ", gacha1)
-		println("You Lose!")
+		fmt.Println("User Input :", gacha)
+		fmt.Println("Komputer random :", komputer_random)
+		fmt.Println("You Lose !")
 	}
 }
 
 func main() {
-	// quiz1()
+	quiz1()
 	// quiz2()
 	// quiz3()
 	// quiz4()
-	quiz5()
+	// quiz5()
 	// quiz6()
 }
