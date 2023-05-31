@@ -71,6 +71,6 @@ func main() {
 	//quiz2PowNumber(6)
 	//quiz3Fibonnaci(6)
 	//fmt.Println(quiz4ReverseNumber([]int {4, 3, 6, 7, 8, 1}))
-	fmt.Println(quiz5IsPrimeNumber(4))
+	fmt.Println(quiz5IsPrimeNumber(100))
 	//fmt.Println(IsPrime(7))
 }
