@@ -34,7 +34,7 @@ func kotakIndex(count int) {
 
 	//cetak baris ke bawah
 	// 	for row := 0; row < count; row++ {
-	// 		//cetak kolom
+	//cetak kolom
 	// 		for col := 0; col < count; col++ {
 	// 			fmt.Printf("[%d-%d]", row, col)
 	// 		}
@@ -78,72 +78,10 @@ func leftFullDiagonal(count int) {
 	}
 }
 
-func coba(count int) {
-	for row := 0; row < count; row++ {
-		for col := 0; col < count; col++ {
-			if col >= count-row-1 {
-				fmt.Print("*")
-			} else {
-				fmt.Print(" ")
-			}
-		}
-		fmt.Println()
-	}
-}
-
-// 	for row := 0; row < count; row++ {
-// 		for col := 0; col < count; col++ {
-// 			if col >= count-row-1 {
-// 				fmt.Print("*")
-// 			} else {
-// 				fmt.Print("1")
-// 			}
-// 		}
-// 		fmt.Println("*")
-// 	}
-// }
-
-// 	for col := count - 1; 0 <= col; col--{
-// 		for row := 0; row < count; row++ {
-// 			if row >= count-col-1{
-// 				fmt.Print("* ")
-// 			} else {
-// 				fmt.Print(" ")
-// 			}
-// 		}
-// 		fmt.Println()
-// 	}
-// }
-
-func main1() {
-	var num int
-	fmt.Print("Masukkan angka: ")
-	fmt.Scan(&num)
-
-	for i := 1; i <= num; i++ {
-		for j := num; j >= 1; j-- {
-			if i%2 == 0 {
-				fmt.Print(j)
-			} else {
-				fmt.Print(j + (i-1)*num)
-			}
-		}
-		fmt.Println()
-	}
-}
-
-func main2() {
-	var num int
-	fmt.Print("Masukkan angka: ")
-	fmt.Scan(&num)
-
-	for i := 1; i <= num; i++ {
-		for j := 1; j <= num; j++ {
-			if i%2 == 0 {
-				fmt.Print(num - j + 1)
-			} else {
-				fmt.Print(j)
-			}
+func printTriangle(rows int) {
+	for i := 1; i <= rows; i++ {
+		for j := 1; j <= i; j++ {
+			fmt.Print("D ")
 		}
 		fmt.Println()
 	}
@@ -156,7 +94,5 @@ func main() {
 	// leftDiagonal(5)
 	// middleEmptyBox(5)
 	// leftFullDiagonal(5)
-	// coba(5)
-
-	main1()
+	printTriangle(5)
 }
