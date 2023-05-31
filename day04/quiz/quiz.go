@@ -57,9 +57,9 @@ func quiz5IsPrimeNumber(n int)[]string{
 	prime := make([]string, n+1) 
 	for i := 1; i <= n; i++ {  
 		if IsPrime(i){
-			prime[i] = strconv.Itoa(i)+"true"
+			prime[i] = strconv.Itoa(i)+" = true"
 		}else{
-			prime[i] = strconv.Itoa(i)+"false"
+			prime[i] = strconv.Itoa(i)+" = false"
 		}
 	}
 	return prime
@@ -71,6 +71,6 @@ func main() {
 	//quiz2PowNumber(6)
 	//quiz3Fibonnaci(6)
 	//fmt.Println(quiz4ReverseNumber([]int {4, 3, 6, 7, 8, 1}))
-	quiz5IsPrimeNumber(100)
+	fmt.Println(quiz5IsPrimeNumber(4))
 	//fmt.Println(IsPrime(7))
 }
