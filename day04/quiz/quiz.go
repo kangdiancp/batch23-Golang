@@ -56,26 +56,39 @@ func reverseNumber(arr []int) []int {
 	return arr
 }
 
-// func primeNumber(n int) []int {
-// 	arr := make([]int, 0)
+func primeNumber(n int) []int {
+	arr := make([]int, 0)
 
-// 	for num := 2; num < n; num++ {
-// 		isPrime := true
-// 		for i := 2; i*i <= num; i++ {
-// 			if num%i == 0 {
-// 				isPrime = false
-// 				break
-// 			}
-// 		}
-// 		if isPrime {
-// 			arr = append(arr, num)
-// 		}
-// 	}
+	for num := 2; num < n; num++ {
+		isPrime := true
+		for i := 2; i*i <= num; i++ {
+			if num%i == 0 {
+				isPrime = false
+				break
+			}
+		}
+		if isPrime {
+			arr = append(arr, num)
+		}
+	}
 
-// 	return arr
-// }
+	return arr
+}
 
 // 5.
+func isPrime(n int) bool {
+	if n == 1 {
+		return false
+	}
+	for i := 2; i <= n/2; i++ {
+		if n%i == 0 {
+			return false
+		}
+	}
+
+	return true
+}
+
 func isPrimeNumber(n int) []string {
 	arr := make([]string, n+1)
 
@@ -88,19 +101,6 @@ func isPrimeNumber(n int) []string {
 	}
 
 	return arr
-}
-
-func isPrime(n int) bool {
-	if n == 1 {
-		return false
-	}
-	for i := 2; i <= n/2; i++ {
-		if n%i == 0 {
-			return false
-		}
-	}
-
-	return true
 }
 
 func main() {
@@ -116,6 +116,9 @@ func main() {
 	fmt.Println(" ")
 	nums4 := []int{4, 3, 6, 7, 8, 1}
 	fmt.Println("(4.) ", reverseNumber(nums4))
+
+	fmt.Println(" ")
+	fmt.Println("(5. a.) ", primeNumber(100))
 
 	fmt.Println(" ")
 	fmt.Println("(5.) ", isPrimeNumber(100))
