@@ -171,13 +171,13 @@ func soalnomer8(nilai int) {
 	}
 }
 func main() {
-	//soalnomor1()
-	//alnomor2()
-	//soalnomor3()
-	//soalnomor4()
-	//soalnomor5()
-	//soalnomor6()
+	//soalnomor1(5)
+	//alnomor2(5)
+	soalno3()
+	//soalnomor4(5)
+	//soalnomor5(5)
+	//soalnomor6(9)
 	//soalnomor7(9)
-	soalnomer8(8)
+	//soalnomer8(8)
 
 }
