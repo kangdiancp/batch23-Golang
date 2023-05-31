@@ -161,8 +161,9 @@ func main() {
 	// soal2(5)
 	// soal3(5)
 	// soal4(5)
-	soal5(5)
+	// soal5(5)
 	// soal6(9)
 	// soal7(5)
 	// soal8(9)
+	soal8(10)
 }

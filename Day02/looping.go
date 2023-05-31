@@ -6,6 +6,17 @@ import (
 	"unicode"
 )
 
+func main() {
+	wordString()
+	// switchLoop()
+	// switchValLoop()
+	// rangeIndexLoop()
+	// countUpperChar("BootCamp gOlang")
+	// condition()
+	// basicLoop()
+	// initLoop()
+}
+
 func wordString() {
 	word := "Hello World"
 	fmt.Println("length : ", len((word)))
@@ -93,15 +104,4 @@ func switchValLoop() {
 			fmt.Println("Non Prime Number", val)
 		}
 	}
-}
-
-func main() {
-	// switchLoop()
-	// switchValLoop()
-	// rangeIndexLoop()
-	// countUpperChar("BootCamp gOlang")
-	wordString()
-	condition()
-	// basicLoop()
-	// initLoop()
 }
