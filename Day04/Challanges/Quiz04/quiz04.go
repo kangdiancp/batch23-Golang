@@ -54,7 +54,7 @@ func isPrimeNumber(n int) []string {
 	primeArray := make([]string, n+1) //Make([] string, length) = membuat array baru
 	for i := 1; i <= n; i++ {
 		if isPrime(i) {
-			primeArray[i] = strconv.Itoa(i) + " = true,"
+			primeArray[i] = strconv.Itoa(i) + " = true," // Strconv
 		} else {
 			primeArray[i] = strconv.Itoa(i) + " = False,"
 		}
