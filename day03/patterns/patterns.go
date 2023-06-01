@@ -82,10 +82,10 @@ func segitiga(count int) {
 }
 
 func main() {
-	// basic()
-	// kotak(5)
-	// kotakIndex(5)
-	// diagonal(5)
-	// emptyBox(5)
+	basic()
+	kotak(5)
+	kotakIndex(5)
+	diagonal(5)
+	emptyBox(5)
 	segitiga(5)
 }
