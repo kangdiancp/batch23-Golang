@@ -77,10 +77,10 @@ func segitigaSiku(count int) {
 }
 
 func main() {
-	// basic()
-	// kotak(5)
-	// kotakIndex(5)
-	// diagonal(5)
-	// kotakBolong(5)
+	basic()
+	kotak(5)
+	kotakIndex(5)
+	diagonal(5)
+	kotakBolong(5)
 	segitigaSiku(5)
 }
