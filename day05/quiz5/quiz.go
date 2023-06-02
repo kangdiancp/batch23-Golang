@@ -195,7 +195,7 @@ func kotakempat() [7][7]int {
 }
 
 func kotaktujuh() {
-	N := 7
+	N := 8
 
 	// Membuat matriks dengan ukuran N x N
 	matrix := make([][]int, N)
