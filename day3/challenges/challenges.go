@@ -56,16 +56,14 @@ func nomor4(count int) {
 		for col := count - 1; 0 <= col; col-- {
 			if row == col {
 				fmt.Print("10 ")
+			} else if row <= col {
+				fmt.Print("21 ")
 			} else {
-				if row <= col {
-					fmt.Print("21 ")
-				} else {
-					fmt.Print(" ")
-				}
+				fmt.Print(" ")
 			}
 		}
-		fmt.Println()
 	}
+	fmt.Println()
 }
 
 func nomor5(count int) {
