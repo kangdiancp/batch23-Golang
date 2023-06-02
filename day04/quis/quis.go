@@ -5,6 +5,7 @@ import (
 	"strconv"
 )
 
+// numer 1
 func evenOrOddNumber(n int) []int {
 	arr := make([]int, n)
 	if n%2 == 1 {
@@ -20,6 +21,8 @@ func evenOrOddNumber(n int) []int {
 	return arr
 }
 
+//number2
+
 func powNumber(n int) []int {
 	arr := make([]int, n)
 	arr[0] = 1
@@ -28,6 +31,8 @@ func powNumber(n int) []int {
 	}
 	return arr
 }
+
+//number3
 
 func fibonaci(n int) []int {
 	arr := make([]int, n)
@@ -39,6 +44,8 @@ func fibonaci(n int) []int {
 	return arr
 }
 
+//number4
+
 func reverseNumber(arr []int) []int {
 	for i := 1; i <= len(arr)/2; i++ {
 		temp := arr[len(arr)-i]
@@ -48,6 +55,8 @@ func reverseNumber(arr []int) []int {
 	}
 	return arr
 }
+
+//number5
 
 func isPrimeNumber(n int) []string {
 	primeArray := make([]string, n+1)
@@ -75,10 +84,10 @@ func isPrime(num int) bool {
 
 func main() {
 	fmt.Println(evenOrOddNumber(5))
-	fmt.Println(fibonaci(5))
+	fmt.Println(fibonaci(6))
 	fmt.Println(powNumber(6))
 	num4 := []int{4, 3, 6, 7, 8, 1, 2, 5}
 	fmt.Println(reverseNumber(num4[0:]))
-	fmt.Println(isPrimeNumber(10))
+	fmt.Println(isPrimeNumber(50))
 
 }
