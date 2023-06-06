@@ -3,13 +3,13 @@ package main
 import "fmt"
 
 func main() {
-	// printMatrix(initDiagonal())
+	printMatrix(initDiagonal())
 	// printMatrix(initDiagonal2())
 	// (kunciJawabanSoal())
 	// segitigaMatrix()
 	// printMatrix(kotakMatrix())
 	// (kotakMatrix2(7))
-	(kotakMatrix3(7))
+	// (kotakMatrix3(7))
 }
 
 // no 1
