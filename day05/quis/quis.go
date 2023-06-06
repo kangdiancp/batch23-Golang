@@ -5,16 +5,6 @@ import (
 	"strconv"
 )
 
-// print matriks
-// func printMatriks(matriks [5][5]int) {
-// 	for i := 0; i < len(matriks); i++ {
-// 		for j := 0; j < len(matriks[j]); j++ {
-// 			fmt.Printf("%d ", matriks[i][j])
-// 		}
-// 		fmt.Println()
-// 	}
-// }
-
 //nomor1
 
 func initArrayDiagonalSum() {
