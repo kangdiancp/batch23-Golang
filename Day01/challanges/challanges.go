@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"math/rand"
+	"strconv"
 )
 
 func main() {
@@ -92,14 +93,10 @@ func soal7(number int) {
 		angka3 = sisa / 10
 		angka4 = sisa % 10
 
-// Itoa -> Convert integer to string
+		// Itoa -> Convert integer to string
 		reverse := strconv.Itoa(angka4) + strconv.Itoa(angka3) + strconv.Itoa(angka2) + strconv.Itoa(angka1)
 		fmt.Printf("\n Reverse : %d -> %s", number, reverse)
 	}
-}
-
-func sumNumber(num int) {
-	var
 }
 
 // Soal 8

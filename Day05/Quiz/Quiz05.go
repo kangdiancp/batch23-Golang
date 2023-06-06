@@ -7,7 +7,7 @@ func soal01() {
 	var matrix [5][5]int
 	sumDiagonal := 0
 
-	for row := 0; row < len(matrix); row++ {
+	for row := 0; row < len(matrix); row++ { // Membuat isi Nilai Baris
 		for col := 0; col < len(matrix); col++ {
 			// Mengisi Diagonal
 
@@ -50,14 +50,15 @@ func soal02() {
 	nDiagonal[0] = 2
 	sumDiagonal := 0
 
+	// Menampung niai variabel nDiagonal
 	for i := 1; i < len(matrix); i++ {
 		nDiagonal[i] = nDiagonal[i-1] * 2
 	}
 
 	for row := 0; row < len(matrix); row++ {
 		for col := 0; col < len(matrix); col++ {
-			// Mengisi Diagonal
 
+			// Mengisi Diagonal
 			if row == col {
 				matrix[row][col] = nDiagonal[row]
 				sumDiagonal += matrix[row][col]
@@ -103,11 +104,11 @@ func soal03() {
 }
 
 // soal 04
-func soal04() [7][7]int {
+func soal4KotakArray() [7][7]int {
 	var matrix [7][7]int
 	index0 := 17
 	midValue := 3
-	index1 := index0 + midValue
+	index1 := index0 + midValue // 20
 	index2 := index0 + (midValue * (len(matrix) + 1))
 
 	for i := 0; i < len(matrix); i++ {
@@ -258,11 +259,12 @@ func soal07(length int) {
 
 }
 func main() {
-	soal01()
-	soal02()
-	soal03()
-	soal04()
-	soal05()
-	soal06(7)
-	soal07(7)
+	// soal01()
+	// soal02()
+	// soal03()
+	// soal04()
+	soal4KotakArray()
+	// soal05()
+	// soal06(7)
+	// soal07(7)
 }
