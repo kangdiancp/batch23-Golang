@@ -43,9 +43,68 @@ insert into t_client (client_number, client_name, birth_date) values
 ('CL003', 'DAVID BECKHAM', '1985-9-3'),
 ('CL004', 'MICHAEL OWEN', '2012-9-3')
 
-select * from t_policy
+
+--- a
+select p.* from t_policy p 
+join t_client c on p.client_number = c.client_number
+where p.policy_submit_date > '2018-01-15' 
+
+---b
+SELECT * FROM t_policy a
+	JOIN t_agent b
+	ON a.agent_code = b.agent_code
+	WHERE policy_status = 'INFORCE' AND agent_office = 'JAKARTA';
+
+---c
+SELECT a.agent_code, (b.commission/b.premium * 100) AS basic_commission
+    FROM t_agent a
+    JOIN t_policy b ON a.agent_code = b.agent_code;
+
+--d
+UPDATE t_policy
+SET policy_due_date = DATE_TRUNC('MONTH', policy_submit_date + INTERVAL '30 days') + INTERVAL '1 MONTH' - INTERVAL '1 DAY';
+
+--e
+SELECT a.agent_code, a.agent_name, a.agent_office, p.premium - cast(p.premium * 0.1 AS MONEY) AS produksi_agent
+    FROM t_agent AS a 
+    JOIN t_policy as p ON p.agent_code = a.agent_code
+    WHERE cast(p.premium * 0.1 AS MONEY) < cast(1000000 AS MONEY)
+ 
+	
+	
+select * from t_policy 
 select * from t_agent	
 select * from t_client
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
