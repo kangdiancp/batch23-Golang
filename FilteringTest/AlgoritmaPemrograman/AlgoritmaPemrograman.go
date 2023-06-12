@@ -76,57 +76,58 @@ func sumZero(nums []int) []int {
 
 // 6.
 func plusOne(digits []int) []int {
-	return increment(digits)
-}
-
-func increment(digits []int) []int {
 	if len(digits) == 0 {
 		return []int{1}
 	}
 
-	last_digit := digits[len(digits)-1]
+	lastDigit := digits[len(digits)-1]
 
-	last_digit += 1
-	if last_digit > 9 {
-		last_digit = 0
-		result := increment(digits[:len(digits)-1])
-		return append(result, last_digit)
+	lastDigit += 1
+
+	if lastDigit > 9 {
+		lastDigit = 0
+
+		result := plusOne(digits[:len(digits)-1])
+
+		return append(result, lastDigit)
 	} else {
-		digits[len(digits)-1] = last_digit
+		digits[len(digits)-1] = lastDigit
+
 		return digits
 	}
 }
 
 // 7.
 func duaBuahArray(word1, word2 []string) ([]string, []string) {
-	strMap := make(map[string]bool)
-
-	for _, str := range word1 {
-		strMap[str] = true
-	}
-
 	sameStrings := []string{}
 	differentStrings := []string{}
 
-	for _, str := range word2 {
-		if strMap[str] {
-			sameStrings = append(sameStrings, str)
-		} else {
-			differentStrings = append(differentStrings, str)
+	for _, str1 := range word1 {
+		found := false
+		for _, str2 := range word2 {
+			if str1 == str2 {
+				sameStrings = append(sameStrings, str1)
+				found = true
+				break
+			}
+		}
+		if !found {
+			differentStrings = append(differentStrings, str1)
 		}
 	}
 
-	fmt.Println("String yang sama:")
-	for _, str := range sameStrings {
-		fmt.Println(str)
+	for _, str2 := range word2 {
+		found := false
+		for _, str1 := range word1 {
+			if str2 == str1 {
+				found = true
+				break
+			}
+		}
+		if !found {
+			differentStrings = append(differentStrings, str2)
+		}
 	}
-	fmt.Println()
-
-	fmt.Println("String yang berbeda:")
-	for _, str := range differentStrings {
-		fmt.Println(str)
-	}
-	fmt.Println()
 
 	return sameStrings, differentStrings
 }
