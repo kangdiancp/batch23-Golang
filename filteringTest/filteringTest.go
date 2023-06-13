@@ -58,7 +58,7 @@ func soal5(index []int) {
 		for j := i + 1; j < len(index); j++ {
 			for k := j + 1; k < len(index); k++ {
 				if index[i]+index[j]+index[k] == 0 {
-					fmt.Println("Index ke-", "[", i, ",", j, ",", k, "]")
+					fmt.Println("Nilai ke-", "[", index[i], ",", index[j], ",", index[k], "]")
 				}
 			}
 		}
@@ -82,8 +82,37 @@ func soal6(digit []int) []int {
 	return digit
 }
 
-func soal7() {
+func soal7(arr1, arr2 []string) {
+	var same, different []string
+	for _, value := range arr2 {
+		found := false
+		for _, value1 := range arr1 {
+			if value == value1 {
+				found = true
+				break
+			}
+		}
+		if found {
+			same = append(same, value)
+		} else {
+			different = append(different, value)
+		}
+	}
+	for _, v := range arr1 {
+		found := true
+		for _, v1 := range arr2 {
+			if v == v1 {
+				found = false
+				break
+			}
+		}
+		if found {
+			different = append(different, v)
+		}
+	}
 
+	fmt.Println("Same = ", same)
+	fmt.Println("Different = ", different)
 }
 
 func soal8(arr []string) bool {
@@ -131,8 +160,13 @@ func main() {
 	soal5([]int{2, 3, 4, -1, -2})
 	soal6([]int{1, 2, 3})
 
+	arr1 := []string{"mangga", "apel", "melon", "pisang", "sirsak", "tomat", "nanas", "nangka", "timun", "mangga"}
+	arr2 := []string{"bayam", "wortel", "kangkung", "mangga", "tomat", "kembang kol", "nangka", "timun"}
+	soal7(arr1, arr2)
+
 	arr := []string{"Tom", "Tim", "Tim", "Tom"}
 	fmt.Println("Outputnya: ", soal8(arr))
+
 	soal9([]int{2, 3, 4, 5, 6, 7, 8, 9, 1, 10})
 	soal10([]int{2, 14, 10, 1, 11, 12, 3, 4}, 7)
 }
