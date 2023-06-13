@@ -20,6 +20,7 @@ func soal02(n int) {
 			}
 
 		}
+
 		for k := 0; k < len(matriks); k++ {
 			if k == 0 {
 				matriks[row][k] = matriks[row-1][k] + 1
@@ -207,43 +208,44 @@ func soal10(arr []int, target int) []int {
 
 func main() {
 	soal02(1)
-	soal03([]int{-1, 2, 5, 6, 7}, 6)
+	// soal03([]int{-1, 2, 5, 6, 7}, 6)
 
 	// Soal 04
-	counts := []int{2, 7, 11, 15}
-	results := soal04(counts, 17)
-	fmt.Println(results)
+	// counts := []int{2, 7, 11, 15}
+	// results := soal04(counts, 20)
+	// fmt.Println(results)
 
 	// Soal 05
-	result2 := soal05([]int{})
-	fmt.Println(result2)
+	// result2 := soal05([]int{-1, 0, 3, 2, -1, 4})
+	// fmt.Println(result2)
 
 	// Soal 06
-	digits := []int{1, 2, 3}
-	fmt.Println(soal06(digits))
+	// digits := []int{1, 2, 3}
+	// fmt.Println(soal06(digits))
 
 	// Soal 07
-	array1 := []string{"Mangga", "Apel", "Melon", "Pisang", "Sirsak", "Tomat", "Nanas", "Nangka", "Timun", "Mangga"}
-	array2 := []string{"Bayam", "Apel", "Wortel", "Kangkung", "Mangga", "Tomat", "Kembang Kol", "Nangka", "Timun"}
+	// array1 := []string{"Mangga", "Apel", "Melon", "Pisang", "Sirsak", "Tomat", "Nanas", "Nangka", "Timun", "Mangga"}
+	// array2 := []string{"Bayam", "Apel", "Wortel", "Kangkung", "Mangga", "Tomat", "Kembang Kol", "Nangka", "Timun"}
 
-	same, different := soal07(array1, array2)
-	fmt.Println("Same =", same)
-	fmt.Println("Different =", different)
+	// same, different := soal07(array1, array2)
+	// fmt.Println("Same =", same)
+	// fmt.Println("Different =", different)
 
-	// Soal 08
+	// // Soal 08
 	// arr2 := []string{"asep", "budi", "-", "budi", "asep"}
-	// result3 := soal08(arr2)
-	fmt.Println(soal08([]string{"asep", "budi", "-", "budi", "asep"}))
+	// // result3 := soal08(arr2)
+	// fmt.Println(soal08(arr2))
+	// fmt.Println(soal08([]string{"asep", "budi", "-", "budi", "asep"}))
 
-	// Soal 09
-	array3 := []int{2, 3, 4, 5, 6, 7, 8, 9, 1, 10}
-	min1, max1 := soal09(array3)
-	fmt.Println("min =", min1)
-	fmt.Println("max =", max1)
+	// // Soal 09
+	// array3 := []int{2, 3, 4, 5, 6, 7, 8, 9, 1, 10}
+	// min1, max1 := soal09(array3)
+	// fmt.Println("min =", min1)
+	// fmt.Println("max =", max1)
 
-	// Soal 10
-	// input := []int{4, 7, 1, 20}
-	// target := 9
-	// output := soal10([]int{4, 7, 1, 20}, 9)
-	fmt.Println(soal10([]int{4, 7, 1, 20}, 9))
+	// // Soal 10
+	// // input := []int{4, 7, 1, 20}
+	// // target := 9
+	// // output := soal10([]int{4, 7, 1, 20}, 9)
+	// fmt.Println(soal10([]int{4, 7, 1, 20}, 9))
 }
