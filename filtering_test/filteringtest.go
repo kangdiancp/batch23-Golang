@@ -83,8 +83,78 @@ func soal6plusOneDigit(arr []int)[] int{
 	return arr
 }
 
-func soal7samaDanBeda() {
+func soal7samaDanBeda(arr1, arr2 [] string) {
+	// var aray1 []string
+	// var aray2 []string
+	var same []string
+	var different []string
+	var gabungan []string
+
+	// for i := 0; i < len(arr1); i++ {
+	// 	for j := i+1; j < len(arr1); j++ {
+	// 		if arr1[i] != arr1[j] {
+	// 			aray1 = append(aray1, arr1[j])
+	// 			break
+	// 		}
+	// 	}
+	// }
+	// for i := 0; i < len(arr2); i++ {
+	// 	for j := i+1; j < len(arr2); j++ {
+	// 		if arr2[i] != arr2[j] {
+	// 			aray2 = append(aray2, arr2[j])
+	// 			break
+	// 		}
+	// 	}
+	// }
+
+	// for i := 0; i < len(aray1); i++ {
+	// 	for j := 0; j < len(aray2); j++ {
+	// 		if aray1[i] == aray2[j]{
+	// 			same = append(same, aray1[i])
+	// 		}
+	// 	}
+	// }
+
+	// gabungan = append(gabungan, aray1...)
+	// gabungan = append(gabungan, aray2...)
+
+	gabungan = append(gabungan, arr1...)
+	gabungan = append(gabungan, arr2...)
+
+	// for _, val1 := range gabungan {
+	// 	found := false
+	// 	for _, val2 := range same {
+	// 		if val1 == val2 {
+	// 			found = true
+	// 			break
+	// 		}
+	// 	}
+	// 	if !found {
+	// 		different = append(different, val1)
+	// 	}
+	// }
+
+	mapfruit := map[string]int{}
+
+	// declare mapfruit to store key, value
+	for key := range gabungan {
+		mapfruit[gabungan[key]]++
+	}
+	fmt.Println(mapfruit)
+
+
+	for key, v := range mapfruit {
+		if v > 1{
+			same = append(same, key)
+		}else {
+			different = append(different, key)
+		}
+	}
+	sort.Strings(same)
+	sort.Strings(different)
 	
+	fmt.Println("Same = ", same)
+	fmt.Println("Different = ", different)
 }
 
 func soal8isPalindrome(arr []string) bool {
@@ -138,6 +208,9 @@ func main(){
 	// fmt.Println(soal5SumZero([]int {-1, 0, 1, 2, -1, 4}))
 	//fmt.Print(soal6plusOneDigit([]int{1, 2, 3, 9}))
 
+	// 7
+	soal7samaDanBeda([]string{"Mangga", "Apel", "Melon", "Pisang", "Sirsak", "Tomat", "Nanas", "Nangka", "Timun", "Mangga"}, 
+					 []string{"Bayam", "Wortel", "Kangkung", "Mangga", "Tomat", "Kembang Kol", "Nangka", "Timun"})
 
 	//8
 	// arr := []string{"asep", "budi", "-", "budi", "asep"}
