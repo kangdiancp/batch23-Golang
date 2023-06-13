@@ -144,8 +144,10 @@ func compareArrays(arr1, arr2 []string) ([]string, []string) {
 // no 6
 func plusOneDigit(digits []int) []int {
 	n := len(digits)
+
 	//untuk melakukan penambahan 1 pada digit terakhir
 	digits[n-1] += 1
+
 	//untuk melakukan propragasi carry jika diperlukan
 	carry := 0
 	for i := n - 1; i >= 0; i-- {
@@ -185,17 +187,29 @@ func sumZero(arr []int) []int {
 }
 
 // no 4
-func addSum(nums []int, target int) []int {
-	indices := make(map[int]int)
+// func addSum(nums []int, target int) []int {
+// 	indices := make(map[int]int)
 
-	for i, num := range nums {
-		complement := target - num
-		if idx, ok := indices[complement]; ok {
-			return []int{idx, i}
+// 	for i, num := range nums {
+// 		complement := target - num
+// 		if idx, ok := indices[complement]; ok {
+// 			return []int{idx, i}
+// 		}
+// 		indices[num] = i
+// 	}
+// 	return nil
+// }
+
+func addSum(nums []int, target int) []int {
+	for i := 0; i < len(nums)-1; i++ {
+		for j := i + 1; j < len(nums); j++ {
+			if nums[i]+nums[j] == target {
+				return []int{i, j}
+			}
 		}
-		indices[num] = i
 	}
-	return nil
+
+	return []int{}
 }
 
 // no 3
@@ -222,3 +236,24 @@ func printTriangle() {
 		fmt.Println()
 	}
 }
+
+// func bilGenap(n int) []int {
+// 	arr := make([]int, n)
+
+// 	for i := 0; i < n; i++ {
+// 		if i%2 == 0 {
+// 			arr[i] = i
+// 		}
+// 	}
+// 	return arr
+// }
+
+// func findTarget1(arr []int, n int) int {
+// 	for i := 0; i < len(arr)-1; i++ {
+// 		if arr[i] == n-i {
+// 			return i
+// 		}
+
+// 	}
+// 	return 1
+// }
