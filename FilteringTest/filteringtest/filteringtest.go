@@ -30,7 +30,7 @@ func segitiga(n int) {
 
 	for i := 0; i < len(matriks); i++ {
 		for j := 0; j < len(matriks); j++ {
-			fmt.Print(matriks[i][j], " ")
+			fmt.Print(matriks[i][j], "	")
 		}
 		fmt.Println()
 	}

@@ -257,7 +257,7 @@ func main() {
 	//soal5IndexSum3()
 
 	// soal no 6
-	soal6IndexLuar(7)
+	//soal6IndexLuar(7)
 
 	// soal no 7
 	//soal7DiagonalSum(7)

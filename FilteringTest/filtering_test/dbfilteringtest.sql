@@ -44,7 +44,7 @@ insert into t_client (client_number, client_name, birth_date) values
 ('CL004', 'MICHAEL OWEN', '2012-9-3')
 
 
---- a
+---  a
 select p.* from t_policy p 
 join t_client c on p.client_number = c.client_number
 where p.policy_submit_date > '2018-01-15' 
