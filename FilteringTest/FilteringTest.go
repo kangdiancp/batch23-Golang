@@ -86,7 +86,6 @@ func plusOneDigit(digits []int) []int {
 		digits[i] = sum % 10
 		carry = sum / 10
 	}
-
 	if carry > 0 {
 		digits = append([]int{carry}, digits...)
 	}
@@ -174,12 +173,12 @@ func isPalindrome(arr []string) bool {
 	}
 
 	for i := 0; i < n/2; i++ {
-		if arr[i] != arr[n-i-1] {
-			return false
+		if arr[i] == arr[n-i-1] {
+			return true
 		}
 	}
 
-	return true
+	return false
 }
 
 // nomor 9
@@ -211,49 +210,58 @@ func insertElement(arr []int, target int) []int {
 }
 
 func main() {
+
+	// grid := [][]int{
+	// 	{4, 3, 2, -1},
+	// 	{3, 2, 1, -1},
+	// 	{1, 1, -1, -2},
+	// 	{-1, -1, -2, -3},
+	// }
+	// fmt.Println(countNegatives(grid))
+
 	//nomor 2
 	Triangle(1)
 
 	//nomor3
-	arr := []int{-1, 2, 5, 6, 7}
-	findTarget(arr, 6)
+	// arr := []int{-1, 2, 5, 6, 7}
+	// findTarget(arr, 6)
 
-	//nomor4
-	num := []int{2, 7, 11, 15}
-	result := addSum(num, 17)
-	fmt.Println(result)
+	// //nomor4
+	// num := []int{2, 7, 11, 15}
+	// result := addSum(num, 17)
+	// fmt.Println(result)
 
-	//nomor 5
-	result2 := sumZero([]int{})
-	fmt.Println(result2)
+	// //nomor 5
+	// result2 := sumZero([]int{})
+	// fmt.Println(result2)
 
-	//nomor 6
-	digits := []int{1, 2, 3}
-	fmt.Println(plusOneDigit(digits))
+	// //nomor 6
+	// digits := []int{9, 9, 9}
+	// fmt.Println(plusOneDigit(digits))
 
-	//nomor 7
-	array1 := []string{"Mangga", "Apel", "Melon", "Pisang", "Sirsak", "Tomat", "Nanas", "Nangka", "Timun", "Mangga"}
-	array2 := []string{"Bayam", "Apel", "Wortel", "Kangkung", "Mangga", "Tomat", "Kembang Kol", "Nangka", "Timun"}
+	// //nomor 7
+	// array1 := []string{"Mangga", "Apel", "Melon", "Pisang", "Sirsak", "Tomat", "Nanas", "Nangka", "Timun", "Mangga"}
+	// array2 := []string{"Bayam", "Apel", "Wortel", "Kangkung", "Mangga", "Tomat", "Kembang Kol", "Nangka", "Timun"}
 
-	same, different := samaDanBeda(array1, array2)
-	fmt.Println("Same =", same)
-	fmt.Println("Different =", different)
+	// same, different := samaDanBeda(array1, array2)
+	// fmt.Println("Same =", same)
+	// fmt.Println("Different =", different)
 
-	//nomor 8
-	arr2 := []string{"asep", "budi", "-", "budi", "asep"}
-	result3 := isPalindrome(arr2)
-	fmt.Println(result3)
+	// //nomor 8
+	// arr2 := []string{"asep", "budi", "-", "budi", "asep"}
+	// result3 := isPalindrome(arr2)
+	// fmt.Println(result3)
 
-	//nomor 9
-	array3 := []int{2, 3, 4, 5, 6, 7, 8, 9, 1, 10}
-	min1, max1 := minMaxArray(array3)
-	fmt.Println("min =", min1)
-	fmt.Println("max =", max1)
+	// //nomor 9
+	// array3 := []int{2, 3, 4, 5, 6, 7, 8, 9, 1, 10}
+	// min1, max1 := minMaxArray(array3)
+	// fmt.Println("min =", min1)
+	// fmt.Println("max =", max1)
 
-	//nomor 10
-	input := []int{4, 7, 1, 20}
-	target := 9
-	output := insertElement(input, target)
-	fmt.Println(output)
+	// //nomor 10
+	// input := []int{4, 7, 1, 20}
+	// target := 9
+	// output := insertElement(input, target)
+	// fmt.Println(output)
 
 }
