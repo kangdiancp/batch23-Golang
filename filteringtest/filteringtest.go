@@ -10,7 +10,7 @@ import (
 func segitiga() {
 	rows := 7
 	start := 5
-	end := 13
+	end := 17
 	count := start
 
 	for i := 0; i < rows; i++ {
@@ -159,9 +159,9 @@ func main() {
 	//(findTarget([]int{1, 2, 4}, 4))
 	//fmt.Println(addSum([]int{3, 2, 3}, 6))
 	//fmt.Println(sumZero([]int{2, 3, 4, -1, -2}))
-	//fmt.Println(plusOneDigit([]int{1, 2, 3}))
-	// fmt.Println(sameDifferent([]string{"mangga", "apel", "melon", "pisang", "sirsak", "tomat", "nanas", "nangka", "timun"}, []string{"bayam", "wortel", "kangkung", "mangga", "tomat", "kembang kol", "nangka", "timun"}))
+	// fmt.Println(plusOneDigit([]int{1, 2, 9}))
+	fmt.Println(sameDifferent([]string{"mangga", "apel", "melon", "pisang", "sirsak", "tomat", "nanas", "nangka", "timun"}, []string{"bayam", "wortel", "kangkung", "mangga", "tomat", "kembang kol", "nangka", "timun"}))
 	//fmt.Println(isPalindrome([]string{"tik", "tok", "toko", "tik"}))
 	//fmt.Println(minMaxArray([]int{2, 3, 4, 5, 6, 7, 8, 9, 1, 10}))
-	fmt.Println(insertElement([]int{4, 7, 1, 20}, 9))
+	//fmt.Println(insertElement([]int{4, 7, 1, 20}, 9))
 }
