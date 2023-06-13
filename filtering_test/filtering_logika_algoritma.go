@@ -88,8 +88,46 @@ func nomor6(arr []int) {
 	fmt.Println(masukkan)
 }
 
-func nomor7() {
-	//Belum dapat
+func nomor7(arr1, arr2 []string) {
+	var simpanArraySame []string
+	var simpanArrayDiff []string
+	var simpanDataSame []string
+	var a []string
+
+	for _, value1 := range arr1 {
+		for _, value2 := range arr1 {
+			if value1 != value2 {
+				simpanDataSame = append(simpanDataSame, value2)
+			}
+		}
+		break
+	}
+
+	for _, value1 := range arr1 {
+		for _, value2 := range arr1 {
+			if value1 == value2 {
+				a = append(a, value2)
+				break
+			}
+		}
+		break
+	}
+	fmt.Println(simpanDataSame)
+
+	for array1 := 0; array1 < len(simpanDataSame); array1++ {
+		for array2 := 0; array2 < len(arr2); array2++ {
+			if simpanDataSame[array1] == arr2[array2] {
+				simpanArraySame = append(simpanArraySame, simpanDataSame[array1])
+
+			} //else if arr1[array1] != arr2[array2] {
+			// 	simpanArrayDiff = append(simpanArrayDiff, arr1[array1], arr2[array2])
+			// 	break
+			// }
+		}
+	}
+	// fmt.Printf("Same = %s ", simpanArraySame)
+	println()
+	fmt.Printf("Different = %s ", simpanArrayDiff)
 }
 
 func nomor8(arr []string) bool {
@@ -144,6 +182,9 @@ func main() {
 	println()
 	println("Nomor 06---------")
 	nomor6([]int{1, 2, 9})
+	println()
+	println("Nomor 07---------")
+	nomor7([]string{"Mangga", "Apel", "Melon", "Pisang", "Sirsak", "Tomat", "Nanas", "Nangka", "Timun", "Mangga"}, []string{"Bayam", "Wortel", "Kangkung", "Mangga", "Tomat", "Kembang Kol", "Nangka", "Timun"})
 	println()
 	println("Nomor 08---------")
 	fmt.Println(nomor8([]string{"asep", "budi", "-", "budi", "asep"}))
