@@ -41,6 +41,6 @@ func compareArray() {
 }
 
 func main() {
-	initArrayString()
+	//initArrayString()
 	compareArray()
 }

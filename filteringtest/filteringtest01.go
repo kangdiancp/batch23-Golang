@@ -184,30 +184,30 @@ func main() {
 	//segitiga1()
 	//segitga2()
 
-	// no.3
+	//no.3
 	//result := findTarget([]int{1, 2, 4}, 4)
 	//result := findTarget([]int{-1, 2, 5, 6, 7}, 6)
 	//fmt.Println(result)
 
 	// no.4
-	//fmt.Println(addSum([]int{3, 2, 3}, 6))
-	//fmt.Println(addSum([]int{3, 2, 4}, 6))
-	//fmt.Println(addSum([]int{3, 3}, 6))
+	fmt.Println(addSum([]int{3, 2, 3}, 6))
+	fmt.Println(addSum([]int{3, 2, 4}, 6))
+	fmt.Println(addSum([]int{3, 3}, 6))
 
 	// no.5
-	result := sumZero([]int{-1, 0, 1, 2, -1, -4})
-	fmt.Println(result)
+	//result := sumZero([]int{-1, 0, 1, 2, -1, -4})
+	//fmt.Println(result)
 
 	// no.6
 	//digits := []int{1, 2, 3}
 	//fmt.Println(plusOneDigit(digits))
 
 	// no.7
-	//slice1 := []string{"mangga", "apel", "melon", "pisang", "sirsak", "tomat", "nanas", "nangka", "timun", "mangga"}
-	//slice2 := []string{"bayam", "wortel", "kangkung", "mangga", "tomat", "kembang kol", "nangka", "timun"}
-	//same, different := compareSlices(slice1, slice2)
-	//fmt.Printf("Same: %v\n", same)
-	//fmt.Printf("Different: %v\n", different)
+	// slice1 := []string{"mangga", "apel", "melon", "pisang", "sirsak", "tomat", "nanas", "nangka", "timun", "mangga"}
+	// slice2 := []string{"bayam", "wortel", "kangkung", "mangga", "tomat", "kembang kol", "nangka", "timun"}
+	// same, different := compareSlices(slice1, slice2)
+	// fmt.Printf("Same: %v\n", same)
+	// fmt.Printf("Different: %v\n", different)
 
 	// no.8
 	//fmt.Println(isPalindrome([]string{"asep", "budi", "-", "budi", "asep"}))
@@ -217,7 +217,7 @@ func main() {
 	// no.9
 	//fmt.Println(minMaxArray([]int{2, 3, 4, 5, 6, 7, 8, 9, 1, 10}))
 
-	// no.10
+	//no.10
 	//array := []int{4, 7, 1, 20}
 	//target := 9
 	//result := menyisipkan(array, target)
