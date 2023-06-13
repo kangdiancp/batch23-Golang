@@ -8,13 +8,11 @@ import (
 
 // nomor 3
 func findTarget(data []int, x int) {
-
 	for i := 0; i < len(data); i++ {
 		if data[i] == x {
 			fmt.Println(i)
 		}
 	}
-
 }
 
 // nomor 8
@@ -240,14 +238,14 @@ func main() {
 	// fmt.Println(insertElement(input, target))
 
 	//nomor 2
-	// segitiga(1)
+	segitiga(1)
 
 	//nomor4
 	// num := []int{2, 7, 11, 15}
 	// fmt.Println(addSum(num, 13))
 
 	//nomor 5
-	// result := sumZero([]int{})
+	// result := sumZero([]int{2, 3, 4, -1, -2})
 	// fmt.Println(result)
 
 	//nomor 6
@@ -257,5 +255,6 @@ func main() {
 	//nomor 7
 	// array1 := []string{"Mangga", "Apel", "Melon", "Pisang", "Sirsak", "Tomat", "Nanas", "Nangka", "Timun", "Mangga"}
 	// array2 := []string{"Bayam", "Apel", "Wortel", "Kangkung", "Mangga", "Tomat", "Kembang Kol", "Nangka", "Timun"}
+	// fmt.Println(samaDanBeda(array1, array2))
 
 }
