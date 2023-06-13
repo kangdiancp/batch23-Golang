@@ -66,7 +66,9 @@ func plusOneDigit(digit []int) []int {
 
 	for i := number - 1; i >= 0; i-- {
 		sum := digit[i] + core
+		// >= 10
 		digit[i] = sum % 10
+		// < 10
 		core = sum / 10
 	}
 
@@ -159,6 +161,31 @@ func sameDifferent(arr1, arr2 []string) ([]string, []string) {
 	return same, different
 }
 
+func sameDiffArray(arr1 []string, arr2 []string) ([]string, []string) {
+	mergeArray := []string{}
+	mergeArray = append(mergeArray, arr1...)
+	mergeArray = append(mergeArray, arr2...)
+
+	mapString := map[string]int{}
+
+	for key := range mergeArray {
+		mapString[mergeArray[key]]++
+	}
+	fmt.Println(mapString)
+
+	sameArray := []string{}
+	diffArray := []string{}
+
+	for key, value := range mapString {
+		if value > 1 {
+			sameArray = append(sameArray, key)
+		} else {
+			diffArray = append(diffArray, key)
+		}
+	}
+	return arr1, arr2
+}
+
 // soal no 8
 func isPalindrome(kata []string) bool {
 	length := len(kata)
@@ -202,14 +229,14 @@ func sisipAngkaArr(arr []int, target int) []int {
 
 func main() {
 	// soal no 2
-	// soalNoDua(7, 1)
+	soalNoDua(7, 1)
 
 	// soal no 3
 	// fmt.Println(findTarget([]int{1, 2, 4}, 4))
 	// fmt.Println(findTarget([]int{-1, 2, 5, 6, 7}, 6))
 
 	// soal no 4
-	// fmt.Println(addSum([]int{2, 7, 11, 15}, 9))
+	// fmt.Println(addSum([]int{11, 7, 15, 2}, 9))
 
 	// soal no 5
 	// fmt.Println(sumZero([]int{-1, 0, 1, 2, -1, 4}, 0))
@@ -218,16 +245,23 @@ func main() {
 	// fmt.Println(plusOneDigit([]int{1, 2, 3}))
 
 	// soal no 7
-	// arr1 := []string{"Mangga", "Apel", "Melon", "Pisang", "Sirsak", "Tomat", "Nanas", "Nangka", "Timun", "Mangga"}
-	// arr2 := []string{"Bayam", "Apel", "Wortel", "Kangkung", "Mangga", "Tomat", "Kembang Kol", "Nangka", "Timun"}
+	arr1 := []string{"Mangga", "Apel", "Melon", "Pisang", "Sirsak", "Tomat", "Nanas", "Nangka", "Timun", "Mangga"}
+	arr2 := []string{"Bayam", "Wortel", "Kangkung", "Mangga", "Tomat", "Kembang Kol", "Nangka", "Timun"}
 
-	// same, different := samaDanBeda(arr1, arr2)
+	same, different := sameDifferent(arr1, arr2)
+	fmt.Println("Same =", same)
+	fmt.Println("Different =", different)
+
+	// arr1 := []string{"Mangga", "Apel", "Melon", "Pisang", "Sirsak", "Tomat", "Nanas", "Nangka", "Timun", "Mangga"}
+	// arr2 := []string{"Bayam", "Wortel", "Kangkung", "Mangga", "Tomat", "Kembang Kol", "Nangka", "Timun"}
+
+	// same, different := sameDiffArray(arr1, arr2)
 	// fmt.Println("Same =", same)
-	// fmt.Println("Different =", different)
+	// fmt.Println("Diff =", different)
 
 	// soal no 8
 	// fmt.Println(isPalindrome([]string{"asep", "budi", "-", "budi", "asep"}))
-	// fmt.Println(isPalindrome([]string{"Tom", "Tim", "tim", "tom"}))
+	// fmt.Println(isPalindrome([]string{"Tom", "Tim", "tim", "TOm"}))
 	// fmt.Println(isPalindrome([]string{"tik", "tok", "toko", "tik"}))
 
 	// soal no 9
