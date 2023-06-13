@@ -33,7 +33,7 @@ func findTarget(arr []int, target int) int {
 
 // Nomor 4 :
 func addSum(nums []int, target int) []int {
-	slice := []int{}
+	arr := []int{}
 	for i := 0; i < len(nums); i++ {
 		for j := i + 1; j < len(nums); j++ {
 			if nums[i]+nums[j] == target {
@@ -41,7 +41,7 @@ func addSum(nums []int, target int) []int {
 			}
 		}
 	}
-	return slice
+	return arr
 }
 
 // Nomor 5 :
@@ -153,9 +153,7 @@ func main() {
 	// printPattern()
 
 	// Nomor 3 :
-	// arr := []int{-1, 2, 5, 6, 7}
-	// targetIndex := findTarget(arr, 6)
-	// fmt.Println(targetIndex)
+	// fmt.Println(findTarget([]int{-1, 2, 5, 6, 7}, 6))
 
 	// Nomor 4 :
 	// fmt.Println(addSum([]int{2, 7, 11, 15}, 9)) // Output: [0, 1]
@@ -167,8 +165,7 @@ func main() {
 	// fmt.Println(sumZero([]int{-1, 0, 1, 2, -1, 4}))
 
 	// Nomor 6 :
-	// nums := []int{9}
-	// fmt.Println(plusOne(nums))
+	// fmt.Println(plusOne([]int{9}))
 
 	// Nomor 7 :
 	arr1 := []string{"Mangga", "Apel", "Melon", "Pisang", "Sirsak", "Tomat", "Nanas", "Nangka", "Timun", "Mangga"}
@@ -179,12 +176,9 @@ func main() {
 	fmt.Println("Different:", different) // Output: Different: [Bayam Wortel Kangkung Kembang Kol]
 
 	// Nomor 8 :
-	// arr1 := []string{"asep", "budi", " - ", "budi", "asep"}
-	// fmt.Println(isPalindrome(arr1)) // Output: true
-	// arr2 := []string{" Tom", "Tim", "tim", "tom"}
-	// fmt.Println(isPalindrome(arr2)) // Output: true
-	// arr3 := []string{"tik", "tok", "toko", "tik"}
-	// fmt.Println(isPalindrome(arr3)) // Output: false
+	// fmt.Println(isPalindrome([]string{"asep", "budi", " - ", "budi", "asep"})) // Output: true
+	// fmt.Println(isPalindrome([]string{" Tom", "Tim", "tim", "tom"})) // Output: true
+	// fmt.Println(isPalindrome([]string{"tik", "tok", "toko", "tik"})) // Output: false
 
 	// Nomor 9 :
 	// arr := []int{2, 3, 4, 5, 6, 7, 8, 9, 1, 10}
@@ -193,7 +187,5 @@ func main() {
 	// fmt.Println("Max:", max) // Output: Max: 10
 
 	// Nomor 10 :
-	// nums := []int{4, 7, 1, 20}
-	// fmt.Println(insertElement(nums, 9))
-
+	// fmt.Println(insertElement([]int{4, 7, 1, 20}, 9))
 }
