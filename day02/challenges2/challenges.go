@@ -74,9 +74,9 @@ func replaceMiddleCharWithStar(input string) {
 }
 
 func main() {
-	findWords("bootcamp Go di codeid, go run Go", "go")
+	// findWords("bootcamp Go di codeid, go run Go", "go")
 	replaceMiddleCharWithStar("Aku Suka Join CodeId BootCamp")
-	countWordWithSpace("How Many Word In This Sentence")
-	countWord("HowManyWordInThisSentence")
-	countVocalConsonant("Rockbye Baby")
+	// countWordWithSpace("How Many Word In This Sentence")
+	// countWord("HowManyWordInThisSentence")
+	// countVocalConsonant("Rockbye Baby")
 }

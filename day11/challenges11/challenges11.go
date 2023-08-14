@@ -25,7 +25,6 @@ func NewEmployee(empID int, firstName, lastName, role string, basicSalary, sales
 	}
 }
 
-// method function
 func (e *Employees) CalcTotalSalary() {
 	switch e.Role {
 	case "Programmer":
